@@ -1,0 +1,110 @@
+/* Full screen center */
+.cardContainer {
+  height: 100vh;
+  display: -webkit-flex;
+  display:         flex;
+  -webkit-align-items: center;
+          align-items: center;
+  -webkit-justify-content: center;
+          justify-content: center;
+}
+.bg {
+  background-image: url(../../assets/img/castel.png);
+  background-size: 25%;
+  background-repeat: no-repeat;
+  background-position: right 40px bottom 40px;
+  background-color: #e0e0e0;
+}
+/* card */
+.loginCard {
+  position: relative;
+  width:38vw;
+  background-color: rgba(0,28,49,0.93);
+}
+@media only screen and (max-width: 1060px) {
+  .loginCard{
+    width: 60vw;
+  }
+  .bg {
+  background-position: right 30px bottom 25px;
+  }
+}
+@media only screen and (max-width: 970px) {
+  .loginCard{
+    width: 55vw;
+  }
+  .bg {
+    background-size: 30%;
+  }
+}
+@media only screen and (max-width: 640px) {
+  .loginCard{
+    width: 91vw;
+  }
+  .bg {
+    background-size: 40%;
+    background-position: right 5px bottom 5px;
+  }
+}
+/* card-fix */
+.card {
+  border-radius: 9px;
+}
+.card-action{
+    position: absolute;
+    border-radius: 9px;
+    bottom: 0;
+    left: 0;
+}
+
+/* form-fix */
+form>div>span {
+  line-height: 40px;
+  vertical-align: middle;
+}
+.choose {
+  /* Flexbox */
+  display: flex;
+  padding-bottom: 1em;
+  align-items: center;
+}
+@media screen and (max-width: 648px) {
+  .choose {
+    flex-direction: column;
+  }
+}
+.input-field label {
+  left: 0rem;
+}
+.submitIt {
+  vertical-align: middle;
+}
+
+/* focus color: icon, input, label */
+.input-field .prefix.active, .input-field input:focus, .input-field label.active {
+  color: #ffab40!important;
+}
+/* label underline focus color */
+.input-field input[type=email]:focus {
+  border-bottom: 1px solid #ffab40;
+  box-shadow: 0 1px 0 0 #ffab40;
+}
+.input-field input[type=number]:focus {
+  border-bottom: 1px solid #ffab40;
+  box-shadow: 0 1px 0 0 #ffab40;
+}
+
+.logoContainer {
+  /* push up img */
+  top: 0%;
+  position: absolute;
+  transform: translateY(-66%);
+}
+.logo {
+  width: 30%;
+  height: 30%;
+  /* Center the img */
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
