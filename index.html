@@ -6,7 +6,7 @@
   <title>元智大學2016三資迎新 - 霍格華資</title>
   <meta name="description" content="元智大學 2016 三資迎新 - 霍格華資。報名截止日：8/18，繳費截止日：8/20，活動時間： 8/22 - 8/26。歡迎資傳、資工、資管的大一新生加入唷！">
   <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, maximum-scale=1, user-scalable=no" />
-  <meta name="author" content="Oschangkai, sappy5678">
+  <meta name="author" content="Oschangkai, Zi-Shane">
   <meta name="keywords" content="元智大學, 元智, 三資迎新, yzu2016camp, 霍格華資, 2016, 三資, 資工, 資管, 資傳" />
   <meta name="mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -31,13 +31,68 @@
   <meta name="msapplication-TileImage" content="../assets/favicon/ms-icon-144x144.png">
 <!-- CSSs -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2/semantic.min.css'>
+  <link rel="stylesheet" href="http://fonts.googleapis.com/earlyaccess/notosanstc.css">
+  <link rel="stylesheet" href="assets/css/indexStyle.css">
   <link rel="stylesheet" href="assets/css/desktop.css">
   <!--[if lt IE 9]>
   <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
+<!-- Scripts -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2/semantic.min.js"></script>
 </head>
 <body>
+<!-- Navbar -->
+<nav class="act1">
+  <div class="ui secondary menu huge container">
+    <a class="item" data-scroll-nav="1"><img src="assets/img/staff-addWhite-square.png" style="height: 40px; weight: 40px; margin: 0; padding: 0;"></a>
+    <a class="item desktop" data-scroll-nav="2">關於三資迎新</a>
+    <a class="item desktop" data-scroll-nav="3">注意事項</a>
+    <a class="ui item desktop" data-scroll-nav="4">我要報名</a>
+    <div class="right menu">
+      <a class="ui item desktop" data-scroll-nav="5" href="portal/query">繳費登記查詢</a>
+      <a class="ui item mobile">
+        &nbsp;&nbsp;<i class="content icon large"></i></a>
+    </div>
+  </div>
+</nav>
+<section class="section1" data-scroll-index="1">
+  <content class="section1-content">
+    <p>section 1 content</p>
+  </content>
+  <div class="dropdownContainer">
+    <div class="dropdown">
+      <a href="#" data-scroll-goto="2"><button class="circular grey ui icon button">
+        <i class="big angle down icon"></i>
+      </button></a>
+    </div>
+  </div>
+</section>
 
+<section class="cardSection" data-scroll-index="2">
+  <content class="cardContent container">
+    <h1>關於三資迎新</h1><hr>
+  </content>
+</section>
+
+<section class="cardSection" data-scroll-index="3">
+  <content class="cardContent">
+    <h1>營期注意事項</h1><hr>
+  </content>
+</section>
+
+<section class="cardSection" data-scroll-index="4">
+  <content class="cardContent">
+    <h1>報名！</h1><hr>
+  </content>
+</section>
+
+<div includeHTML="assets/html/footer.html"></div>
+<!-- Scripts -->
+  <script src="assets/js/includeHTML.js"></script>
+  <script src="assets/js/scrollIt.min.js"></script>
+  <script src="assets/js/parallax.min.js"></script>
+  <script src="assets/js/indexMain.js"></script>
+  <script src="assets/js/desktop.js"></script>
 </body>

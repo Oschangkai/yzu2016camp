@@ -20,9 +20,10 @@
   position: relative;
   width:38vw;
   background-color: rgba(0,28,49,0.93);
+  box-shadow: 10px 15px 44px -4px rgba(0,0,0,0.7);
 }
 @media only screen and (max-width: 1060px) {
-  .loginCard{
+  .loginCard {
     width: 60vw;
   }
   .bg {
@@ -30,7 +31,7 @@
   }
 }
 @media only screen and (max-width: 970px) {
-  .loginCard{
+  .loginCard {
     width: 55vw;
   }
   .bg {
@@ -38,7 +39,7 @@
   }
 }
 @media only screen and (max-width: 640px) {
-  .loginCard{
+  .loginCard {
     width: 91vw;
   }
   .bg {
@@ -50,12 +51,54 @@
 .card {
   border-radius: 9px;
 }
-.card-action{
-    position: absolute;
-    border-radius: 9px;
-    bottom: 0;
-    left: 0;
+
+/* card */
+.logoContainer {
+  /* push up img */
+  top: 0%;
+  position: absolute;
+  transform: translateY(-66.66666%);
 }
+.logo {
+  width: 30%;
+  height: 30%;
+  /* Center the img */
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cardTitle {
+  line-height: 48px;
+  font-size: 24px;
+  font-weight: 300;
+  text-align: center;
+  vertical-align: middle;
+}
+.cardContent {
+  padding: 20px;
+}
+.cardContent p {
+  margin: 0;
+  color: inherit;
+}
+.cardAction {
+  position: relative;
+  background-color: inherit;
+  border-top: 1px solid rgba(160,160,160,0.2);
+  padding: 20px;
+  border-radius: 9px;
+}
+.cardAction>a {
+  color: #ffab40;
+  margin-right: 18px;
+  transition: color .3s ease;
+  text-transform: uppercase;
+}
+.cardAction a:hover {
+  color: #ffd8a6;
+}
+
 
 /* form-fix */
 form>div>span {
@@ -79,32 +122,17 @@ form>div>span {
 .submitIt {
   vertical-align: middle;
 }
-
 /* focus color: icon, input, label */
 .input-field .prefix.active, .input-field input:focus, .input-field label.active {
   color: #ffab40!important;
 }
 /* label underline focus color */
-.input-field input[type=email]:focus {
-  border-bottom: 1px solid #ffab40;
-  box-shadow: 0 1px 0 0 #ffab40;
-}
-.input-field input[type=number]:focus {
+.input-field input[type=email]:focus, .input-field input[type=number]:focus {
   border-bottom: 1px solid #ffab40;
   box-shadow: 0 1px 0 0 #ffab40;
 }
 
-.logoContainer {
-  /* push up img */
-  top: 0%;
-  position: absolute;
-  transform: translateY(-66%);
-}
-.logo {
-  width: 30%;
-  height: 30%;
-  /* Center the img */
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+
+.whiteText {
+  color: #fff;
 }
