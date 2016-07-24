@@ -118,6 +118,7 @@ section>content>h1 p {
   .cardContent {
     height: 90vh;
     width: 87vw;
+    padding: 1.8rem;
   }
 }
 @media only screen and (max-width: 640px) {
