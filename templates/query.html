@@ -13,27 +13,27 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="format-detection" content="telephone=no">
 <!-- Favicon -->
-  <link rel="apple-touch-icon" sizes="57x57" href="../assets/favicon/apple-icon-57x57.png">
-  <link rel="apple-touch-icon" sizes="60x60" href="../assets/favicon/apple-icon-60x60.png">
-  <link rel="apple-touch-icon" sizes="72x72" href="../assets/favicon/apple-icon-72x72.png">
-  <link rel="apple-touch-icon" sizes="76x76" href="../assets/favicon/apple-icon-76x76.png">
-  <link rel="apple-touch-icon" sizes="114x114" href="../assets/favicon/apple-icon-114x114.png">
-  <link rel="apple-touch-icon" sizes="120x120" href="../assets/favicon/apple-icon-120x120.png">
-  <link rel="apple-touch-icon" sizes="144x144" href="../assets/favicon/apple-icon-144x144.png">
-  <link rel="apple-touch-icon" sizes="152x152" href="../assets/favicon/apple-icon-152x152.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="../assets/favicon/apple-icon-180x180.png">
-  <link rel="icon" type="image/png" sizes="192x192"  href="../assets/favicon/android-icon-192x192.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="96x96" href="../assets/favicon/favicon-96x96.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon/favicon-16x16.png">
-  <link rel="manifest" href="../assets/favicon/manifest.json">
+  <link rel="apple-touch-icon" sizes="57x57" href="../static/assets/favicon/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="../static/assets/favicon/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="../static/assets/favicon/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="../static/assets/favicon/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="../static/assets/favicon/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="../static/assets/favicon/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="../static/assets/favicon/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="../static/assets/favicon/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../static/assets/favicon/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="../static/assets/favicon/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../static/assets/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="../static/assets/favicon/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../static/assets/favicon/favicon-16x16.png">
+  <link rel="manifest" href="../static/assets/favicon/manifest.json">
   <meta name="theme-color" content="rgba(0,28,49,1)">
-  <meta name="msapplication-TileImage" content="../assets/favicon/ms-icon-144x144.png">
+  <meta name="msapplication-TileImage" content="../static/assets/favicon/ms-icon-144x144.png">
 <!-- CSSs -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
-  <link rel="stylesheet" href="../assets/css/queryStyle.css">
-  <link rel="stylesheet" href="../assets/css/desktop.css">
+  <link rel="stylesheet" href="../static/assets/css/queryStyle.css">
+  <link rel="stylesheet" href="../static/assets/css/desktop.css">
   <!--[if lt IE 9]>
   <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
@@ -43,7 +43,7 @@
   <card class="card loginCard">
     <!-- Card Content -->
     <div class="logoContainer">
-      <img class="logo" src="../assets/img/member-round.png">
+      <img class="logo" src="../static/assets/img/member-round.png">
     </div>
     <br /><br />
     <div class="cardContent whiteText">
@@ -51,7 +51,7 @@
       <hr />
       <br />
       <!-- Card Form -->
-      <form class="form">
+      <form id="K-form">
         <div class="choose" id="chooseDIV" onclick="check()">
           <span>請選擇：</span>
           <span>
@@ -78,17 +78,17 @@
         </div>
       </form>
     </div>
-    <div class="cardAction" style="text-align: right;">
+    <div class="cardAction" style="text-align: right;" id="K-submit">
       <a href="#">送出&nbsp;&nbsp;<i class="material-icons submitIt">send</i></a>
    </div>
  </card>
 </div>
-<div includeHTML="../assets/html/footer.html"></div>
+<div includeHTML="../static/assets/html/footer.html"></div>
 <!-- Scripts -->
-<script src="../assets/js/includeHTML.js"></script>
+<script src="../static/assets/js/includeHTML.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
-<script src="../assets/js/desktop.js"></script>
-<script src="../assets/js/queryMain.js"></script>
+<script src="../static/assets/js/desktop.js"></script>
+<script src="../static/assets/js/queryMain.js"></script>
 
 </body>

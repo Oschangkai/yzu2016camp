@@ -9,7 +9,7 @@
           justify-content: center;
 }
 .bg {
-  background-image: url(../../assets/img/castel.png);
+  background-image: url(../img/castel.png);
   background-size: 25%;
   background-repeat: no-repeat;
   background-position: right 40px bottom 40px;
