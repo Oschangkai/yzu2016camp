@@ -40,52 +40,62 @@
   <![endif]-->
 </head>
 <body>
-  <div class="notice">注意事項：匯款資訊；不能用手機看此頁面；註冊後不等於報名成功，需要繳費</div>
+<div class="bannerContainer">
+  <content class="banner">
+    <h2 style="margin-top: auto; color: rgba(255, 255, 255, 1);">2016 三資迎新報名頁</h2>
+    <p style="color: rgba(255, 255, 255, 0.6);">歡迎參加霍格華資，請詳閱注意事項喔！</p>
+  </content>
+</div>
+
+<div class="sec1 content">
+  <content class="noticeContainer">
+    注意事項：匯款資訊；不能用手機看此頁面；註冊後不等於報名成功，需要繳費
+  </content>
+  <hr>
+</div>
+
+<div class="sec2 content">
   <form id="K-form">
+<!-- Form Section1 -->
+    <div class="formContainer">
+      <h4 class="formTitle">基本資料</h4>
 
-    <fieldset>
-      <legend>
-        <h5>基本資料</h5>
-      </legend>
-
-      <div class="input-field" id="nameDIV">
+      <div class="input-field formItems-3" id="nameDIV">
         <i class="material-icons prefix">person</i>
         <input type="text" name="name" id="nameField"></input>
         <label for="nameField">姓名</label>
       </div>
 
-      <div class="input-field" id="nickNameDIV">
+      <div class="input-field formItems-3" id="nickNameDIV">
         <input type="text" name="nickName" id="nickNameField"></input>
         <label for="nickNameField">綽號</label>
       </div>
 
-      <div id="genderDIV">
+      <div class="formItems-3" id="genderDIV">
         <i class="material-icons prefix">wc</i>
-        <label>性別</label>
+        <label class="radLbl">性別</label>
         <input class="with-gap" name="gender" type="radio" value="男" id="genderMaleRadio" />
-        <label for="genderMaleRadio">男</label>
+        <label class="rad" for="genderMaleRadio">男</label>
         <input class="with-gap" name="gender" type="radio" value="女" id="genderFemaleRadio" />
         <label for="genderFemaleRadio">女</label>
       </div>
 
-      <div class="input-field" id="cellphoneDIV">
+      <div class="input-field formItems-2" id="cellphoneDIV">
         <i class="material-icons prefix">smartphone</i>
         <input type="tel" name="cellphone" id="cellphoneField"></input>
         <label for="cellphoneField">聯絡電話（本人手機）</label>
       </div>
 
-      <div class="input-field" id="emailDIV">
+      <div class="input-field formItems-2" id="emailDIV">
         <i class="material-icons prefix">email</i>
         <input type="email" name="email" id="emailField" class="validate"></input>
         <label for="emailField" data-error="格式錯誤，請重新輸入" data-success="正確！">電子信箱</label>
       </div>
-    </fieldset><br />
 
-
-    <fieldset>
-      <legend>
-        <h5>保險所需額外資料</h5>
-      </legend>
+    </div><br />
+<!-- Form Section2 -->
+    <div class="formContainer">
+      <h4 class="formTitle">保險所需額外資料</h4>
 
       <!-- disabled, not necessary filed -->
       <div class="input-field" id="birthdayDIV" hidden>
@@ -94,13 +104,13 @@
         <label for="birthdayField">出生年月日</label>
       </div>
 
-      <div class="input-field" id="userIDDIV">
+      <div class="input-field formItems-2" id="userIDDIV">
         <i class="material-icons prefix">assignment_ind</i>
         <input type="text" name="userID" id="userIDField"></input>
         <label for="userIDField">身分證字號</label>
       </div>
 
-      <div class="input-field" id="addressDIV">
+      <div class="input-field formItems-2" id="addressDIV">
         <i class="material-icons prefix">location_city</i><!-- business -->
         <input type="text" name="address" id="addressField"></input>
         <label for="addressField">戶籍地址</label>
@@ -113,46 +123,44 @@
         <label for="phoneField">家用電話</label>
       </div>
 
-      <div class="input-field" id="parentNameDIV">
+      <div class="input-field formItems-3" id="parentNameDIV">
         <i class="material-icons prefix">account_box</i>
         <input type="text" name="parentName" id="parentNameField"></input>
         <label for="parentNameField">緊急聯絡人姓名</label>
       </div>
 
-      <div class="input-field" id="kinshipDIV">
+      <div class="input-field formItems-3" id="kinshipDIV">
         <i class="material-icons prefix">supervisor_account</i>
         <input type="text" name="kinship" id="kinshipField"></input>
         <label for="kinshipField">與緊急聯絡人的親屬關係</label>
       </div>
 
-      <div class="input-field" id="parentCellphoneDIV">
+      <div class="input-field formItems-3" id="parentCellphoneDIV">
         <i class="material-icons prefix">contact_phone</i>
         <input type="tel" name="parentCellphone" id="parentCellphoneField"></input>
         <label for="parentCellphoneField">緊急聯絡人聯絡電話</label>
       </div>
 
-      <div class="input-field" id="diseaseDIV">
+      <div class="input-field formItems-1" id="diseaseDIV">
         <i class="material-icons prefix">nature_people</i>
-        <input type="text" name="disease" id="diseaseField"></input>
-        <label for="diseaseField">先天性疾病（若無，請填寫"無"）</label>
+        <input type="text" name="disease" id="diseaseField" placeholder="若無，請填寫無疾病"></input>
+        <label for="diseaseField">先天性疾病</label>
       </div>
-    </fieldset><br />
 
+    </div><br />
+<!-- Form Section3 -->
+    <div class="formContainer">
+      <h4 class="formTitle">學校資料</h4>
 
-    <fieldset>
-      <legend>
-        <h5>學校資料</h5>
-      </legend>
-
-      <div class="input-field" id="yzuIDDIV">
+      <div class="input-field formItems-2" id="yzuIDDIV">
         <i class="material-icons prefix">chrome_reader_mode</i>
         <input type="number" name="yzuID" id="yzuIDField" min="1051301" max="1053389" class="validate"></input>
         <label for="yzuIDField" data-error="錯誤，請輸入正確的學號" data-success="正確！">元智大學學號</label>
       </div>
 
-      <div class="input-field" id="transportationDIV">
+      <div class="input-field formItems-2" id="transportationDIV">
         <i class="material-icons prefix">school</i>
-        <select>
+        <select name="dept">
           <option value="" disabled selected>請選擇您的學系</option>
           <option name="dept" value="CSE">資工系</option>
           <option name="dept" value="IM">資管系</option>
@@ -160,26 +168,24 @@
         </select>
         <label>學系</label>
       </div>
-    </fieldset><br />
 
+    </div><br />
+<!-- Form Section4 -->
+    <div class="formContainer">
+      <h4 class="formTitle">營期所需資料</h4>
 
-    <fieldset>
-      <legend>
-        <h5>營期所需資料</h5>
-      </legend>
-
-      <div id="eatingPerfDIV">
+      <div class="formItems-2"id="eatingPerfDIV">
         <i class="material-icons prefix">restaurant</i>
-        <label>飲食習慣</label>
+        <label class="radLbl">飲食習慣</label>
         <input class="with-gap" name="eatingPerf" type="radio" value="non-Vegetarian" id="eatingPerfnonVegeRadio" />
-        <label for="eatingPerfnonVegeRadio">葷</label>
+        <label class="rad2" for="eatingPerfnonVegeRadio">葷</label>
         <input class="with-gap" name="eatingPerf" type="radio" value="Vegetarian" id="eatingPerfVegeRadio" />
         <label for="eatingPerfVegeRadio">素</label>
       </div>
 
-      <div class="input-field" id="clothingSizeDIV">
+      <div class="input-field formItems-2" id="clothingSizeDIV">
         <i class="material-icons prefix">accessibility</i>
-        <select>
+        <select name="clothingSize">
           <option value="" disabled selected>請選擇您的衣服尺寸</option>
           <option name="clothingSize" value="XS">XS</option>
           <option name="clothingSize" value="S">S</option>
@@ -191,18 +197,18 @@
         <label>衣服尺寸</label>
       </div>
 
-      <div id="transportationDIV">
+      <div class="formItems-2" id="transportationDIV">
         <i class="material-icons prefix">directions_transit</i>
-        <label>交通方式</label>
+        <label class="radLbl">交通方式</label>
         <input class="with-gap" name="transportation" type="radio" value="直達元智" id="transportationToYZURadio" />
-        <label for="transportationToYZURadio">直達元智</label>
+        <label class="rad2" for="transportationToYZURadio">直達元智</label>
         <input class="with-gap" name="transportation" type="radio" value="內壢車站" id="transportationByTrainRadio" />
         <label for="transportationByTrainRadio">搭乘火車到內壢車站</label>
       </div>
 
-      <div class="input-field" id="beddingDIV">
+      <div class="input-field formItems-2" id="beddingDIV">
         <i class="material-icons prefix">hotel</i>
-        <select>
+        <select name="bedding">
           <option value="" disabled selected>請選擇迎期寢具準備方式</option>
           <option name="bedding" value="自行準備">我會自行準備（宿舍是木板床喔！）</option>
           <option name="bedding" value="已訂購">我已在新生包中訂購床組，當天會到場領取！</option>
@@ -210,16 +216,17 @@
         <label>寢具</label>
       </div>
 
-      <div class="input-field" id="moreInfoDIV">
+      <div class="input-field formItems-1" id="moreInfoDIV">
         <i class="material-icons prefix">mode_edit</i>
-        <textarea id="moreInfo" class="materialize-textarea" length="200"></textarea>
-        <label for="moreInfo">備註欄（如果以實體匯款單或轉帳單方式繳費，請在備註欄留下學員的姓名和學號）</label>
+        <textarea name="moreInfo" id="moreInfo" class="materialize-textarea" length="200"  placeholder="備註欄（如果以實體匯款單或轉帳單方式繳費，請在備註欄留下學員的姓名和學號）"></textarea>
       </div>
-    </fieldset>
 
-    <button href="#" id="K-submit">送出&nbsp;&nbsp;<i class="material-icons submitIt">send</i></button>
+    </div>
+
   </form>
-  <div includeHTML="../static/assets/html/footer.html"></div>
+      <button href="#" id="K-submit" onclick="send()">送出&nbsp;&nbsp;<i class="material-icons submitIt">send</i></button>
+</div>
+<div includeHTML="../static/assets/html/footer.html"></div>
   <!-- Scripts -->
   <script src="../static/assets/js/includeHTML.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>

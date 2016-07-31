@@ -46,12 +46,14 @@
 <!-- Navbar -->
 <nav class="act1">
   <div class="ui secondary menu huge container">
-    <a class="item" data-scroll-nav="1"><img src="assets/img/staff-addWhite-square.png" style="height: 40px; weight: 40px; margin: 0; padding: 0;"></a>
+    <a class="mobile" data-scroll-nav="1"><img src="assets/img/banner-chenText.png" style="height: 70px;"></a>
+    <a class="item desktop" data-scroll-nav="1"><img src="assets/img/staff-addWhite-square.png" style="height: 40px; weight: 40px; margin: 0; padding: 0;"></a>
     <a class="item desktop" data-scroll-nav="2">關於三資迎新</a>
     <a class="item desktop" data-scroll-nav="3">注意事項</a>
     <a class="ui item desktop" data-scroll-nav="4">我要報名</a>
     <div class="right menu">
-      <a class="ui item desktop" data-scroll-nav="5" href="portal/query">繳費登記查詢</a>
+      <a class="ui item desktop" href="portal/register">立即報名</a>
+      <a class="ui item desktop" href="portal/query">繳費登記與查詢</a>
       <a class="ui item mobile">
         &nbsp;&nbsp;<i class="content icon large"></i></a>
     </div>
@@ -59,35 +61,32 @@
 </nav>
 <section class="section1" data-scroll-index="1">
   <content class="section1-content">
-    <p>section 1 content</p>
+    <h1>霍格華資</h1><p style="font-weight: lighter;">元智大學2016三資迎新</p>
   </content>
   <div class="dropdownContainer">
-    <div class="dropdown">
-      <a href="#" data-scroll-goto="2"><button class="circular grey ui icon button">
-        <i class="big angle down icon"></i>
-      </button></a>
-    </div>
+    <button class="dropdownBtn" data-scroll-goto="2" href="#">
+      <i class="big angle down icon" style="margin: 0;"></i>
+    </button>
   </div>
 </section>
 
-<section class="cardSection" data-scroll-index="2">
-  <content class="cardContent container">
+<section class="cardSection">
+  <content class="cardContent container" data-scroll-index="2">
     <h1>關於三資迎新</h1><hr>
   </content>
 </section>
 
-<section class="cardSection" data-scroll-index="3">
-  <content class="cardContent">
+<section class="cardSection">
+  <content class="cardContent" data-scroll-index="3">
     <h1>營期注意事項</h1><hr>
   </content>
 </section>
 
-<section class="cardSection" data-scroll-index="4">
-  <content class="cardContent">
+<section class="cardSection">
+  <content class="cardContent" data-scroll-index="4">
     <h1>報名！</h1><hr>
   </content>
 </section>
-
 <div includeHTML="assets/html/footer.html"></div>
 <!-- Scripts -->
   <script src="assets/js/includeHTML.js"></script>

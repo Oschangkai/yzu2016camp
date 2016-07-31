@@ -1,6 +1,9 @@
 html {
   font-family: 'Noto Sans TC', sans-serif!important;
 }
+i.icon {
+  width: auto; /* fix icon will padding right on iOS */
+}
 /* Navbar */
 nav {
   position: fixed;
@@ -68,6 +71,7 @@ nav.act2 a.item:hover, nav.act2 a.item.active {
   height: 90vh;
   width: 100vw;
 }
+
 .dropdownContainer {
   /* push down div */
   display: -webkit-flex;
@@ -79,8 +83,13 @@ nav.act2 a.item:hover, nav.act2 a.item.active {
   -webkit-justify-content: center;
           justify-content: center;
 }
-.dropdown {
-  align-items: center;
+.dropdownBtn {
+    width: 50px;
+    height: 50px;
+    border: none;
+    border-radius: 100%;
+    background-color: white;
+    box-shadow: 5px 5px 44px -4px rgba(0,0,0,0.7);
 }
 
 .cardSection {
@@ -88,6 +97,7 @@ nav.act2 a.item:hover, nav.act2 a.item.active {
   background-color: rgba(0, 28, 49, 0.9);
   display: -webkit-flex;
   display: flex;
+  flex-direction: column;
   -webkit-align-items: center;
           align-items: center;
   -webkit-justify-content: center;
@@ -97,7 +107,7 @@ nav.act2 a.item:hover, nav.act2 a.item.active {
   height: 90vh;
   width: 75vw;
   background-color: #e0e0e0;
-  border-radius: 9px;
+  border-radius: 7px;
   -webkit-transition: all 0.4s ease;
   transition: all 0.4s ease;
   padding: 3rem;
@@ -105,7 +115,7 @@ nav.act2 a.item:hover, nav.act2 a.item.active {
 .cardContent:hover{
   box-shadow: 10px 15px 44px -4px rgba(0,0,0,0.7);
 }
-section>content>h1 p {
+section>content>h1 {
   color: rgba(0, 28, 49, 0.75);
 }
 @media only screen and (max-width: 1060px) {
@@ -118,6 +128,9 @@ section>content>h1 p {
     width: 87vw;
     padding: 1.8rem;
   }
+}
+@media screen and (max-width: 760px) {
+
 }
 @media only screen and (max-width: 640px) {
   .cardContent {

@@ -32,6 +32,7 @@
 <!-- CSSs -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/earlyaccess/notosanstc.css">
   <link rel="stylesheet" href="../static/assets/css/queryStyle.css">
   <link rel="stylesheet" href="../static/assets/css/desktop.css">
   <!--[if lt IE 9]>
@@ -55,12 +56,12 @@
         <div class="choose" id="chooseDIV" onclick="check()">
           <span>請選擇：</span>
           <span>
-            <input class="with-gap" name="choose" type="radio" id="paymentRadio" />
+            <input class="with-gap" name="choose" value="register" type="radio" id="paymentRadio" />
             <label for="paymentRadio">繳費登記</label>
           </span>
           <span class="desktop">&nbsp;&nbsp;&nbsp;&nbsp;</span>
           <span>
-            <input class="with-gap" name="choose" type="radio" id="queryRadio" />
+            <input class="with-gap" name="choose" value="query" type="radio" id="queryRadio" />
             <label for="queryRadio">繳費查詢</label>
           </span>
         </div>
@@ -78,7 +79,7 @@
         </div>
       </form>
     </div>
-    <div class="cardAction" style="text-align: right;" id="K-submit">
+    <div class="cardAction" style="text-align: right;" id="K-submit" onclick="send()">
       <a href="#">送出&nbsp;&nbsp;<i class="material-icons submitIt">send</i></a>
    </div>
  </card>

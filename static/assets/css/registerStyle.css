@@ -1,0 +1,162 @@
+html {
+  font-family: 'Noto Sans TC', sans-serif!important;
+  font-weight: 100;
+  color: rgba(0, 28, 49, 1);
+}
+h1 {
+  font-weight: 200;
+}
+h2, h3, h4, h5 {
+  font-weight: 100;
+}
+footer {
+  font-weight: normal;
+}
+.content {
+  padding: 3% 8% 0 8%;
+}
+
+/* Banner */
+.bannerContainer {
+  position: inherit;
+  top: 0;
+  left: 0;
+  height: 40vh;
+  width: 100vw;
+  display: flex;
+  -webkit-align-items: center;
+          align-items: center;
+  background-image: linear-gradient(to bottom, rgba(0, 28, 49, 0.95), rgba(0, 20, 35, 1));
+}
+.banner {
+  padding: 8% 0 8% 8%;
+}
+@media screen and (max-width: 648px) {
+  .bannerContainer {
+    height: 50vh;
+  }
+}
+/* Form */
+.formContainer {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 100vw;
+  -webkit-flex-flow: row wrap;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-align-items: baseline;
+    -webkit-box-align: baseline;
+       -ms-flex-align: baseline;
+          align-items: baseline;
+  -webkit-align-content: flex-start;
+     -ms-flex-line-pack: start;
+          align-content: flex-start;
+}
+.formTitle {
+  -webkit-box-flex: 1;
+      -webkit-flex: 1 0 100%;
+          -ms-flex: 1 0 100%;
+              flex: 1 0 100%;
+}
+.formItems-3 {
+  -webkit-box-flex: 1;
+      -webkit-flex: 1 0 30%;
+          -ms-flex: 1 0 30%;
+              flex: 1 0 30%;
+  margin-left: 3%;
+}
+.formItems-2 {
+  -webkit-box-flex: 1;
+      -webkit-flex: 1 0 40%;
+          -ms-flex: 1 0 40%;
+              flex: 1 0 40%;
+  margin-left: 3%;
+}
+.formItems-1 {
+  -webkit-box-flex: 1;
+      -webkit-flex: 1 0 100%;
+          -ms-flex: 1 0 100%;
+              flex: 1 0 100%;
+  margin-left: 3%;
+}
+@media screen and (max-width: 850px) {
+  .formContainer {
+  -webkit-align-items: stretch;
+       -ms-flex-align: stretch;
+          align-items: stretch;
+  }
+  .formItems-3 {
+    -webkit-box-flex: 1;
+        -webkit-flex: 1 0 100%;
+            -ms-flex: 1 0 100%;
+                flex: 1 0 100%;
+    margin-left: 0%;
+  }
+  .formItems-2 {
+    -webkit-box-flex: 1;
+        -webkit-flex: 1 0 100%;
+            -ms-flex: 1 0 100%;
+                flex: 1 0 100%;
+    margin-left: 0%;
+  }
+  .formItems-1 {
+    margin-left: 0%;
+  }
+}
+
+/* Fix - label padding-left */
+.input-field label {
+  left: 0rem;
+}
+/* radioBtn Label fix */
+.radLbl {
+  position: relative;
+  top: -25px;
+  left: -27px;
+  font-size: 0.8rem;
+}
+/* Two words radioBtn position fix */
+.rad {
+    margin-top: 1.5rem;
+    margin-left: -55px!important;
+    margin-bottom: 1.5rem;
+}
+/* Four words radioBtn position fix */
+.rad2 {
+    margin-top: 1.5rem;
+    margin-left: -80px!important;
+    margin-bottom: 1.5rem;
+}
+
+/* focus color -  icon, input, label */
+.input-field .prefix.active, .input-field input:focus, .input-field label.active {
+  color: rgba(0,20,35,1)!important;
+}
+/* label underline focus color */
+.input-field input[type=email]:focus, .input-field input[type=number]:focus,
+.input-field input[type=tel]:focus, .input-field input[type=text]:focus,
+.input-field textarea:focus {
+  border-bottom: 1px solid rgba(0,20,35,1);
+  box-shadow: 0 1px 0 0 rgba(0,20,35,1);
+}
+/* textarea underline color */
+textarea.materialize-textarea:focus:not([readonly]) {
+  border-bottom: 1px solid rgba(0,20,35,1);
+  box-shadow: 0 1px 0 0 rgba(0,20,35,1);
+}
+/* radioBtn - inner color */
+[type="radio"]:checked+label:after,
+[type="radio"].with-gap:checked+label:after {
+  border: 2px solid rgba(0,20,35,1);
+  background-color: rgba(0,20,35,1);
+}
+/* radioBtn - outer color */
+[type="radio"].with-gap:checked+label:before {
+  border: 2px solid rgba(0,20,35,1);
+}
+/* dropdownOptions color */
+.dropdown-content li>a, .dropdown-content li>span {
+  color: rgba(0,20,35,1);
+}

@@ -9,7 +9,7 @@ function send(){
   jsonForm = [];
   var tmp = {};
   var t;
-  for(t of $("#K-from input")) {
+  for(t of $("#K-form input")) {
       tmp[t.name]=t.value;
   }
 
