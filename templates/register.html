@@ -48,30 +48,57 @@
 </div>
 
 <div class="sec1 content">
-  <content class="noticeContainer">
-    注意事項：匯款資訊；不能用手機看此頁面；註冊後不等於報名成功，需要繳費
+  <h3>注意事項</h3><hr>
+  <content class="secContainer">
+    <div class="msgDiv msgDiv-danger secItems-1" style="margin-left: 0%;">
+      <h5>填完報名表不代表報名完成！</h5>
+      <p>填完以下表單後，請記得至銀行轉帳繳費，並到<a href="../query">這裡</a>填寫繳款帳號後五碼，才算是完成所有報名程序！</p>
+    </div>
+    <div class="msgDiv msgDiv-warning secItems-1" style="margin-left: 0%;">
+      <h5>注意！</h5>
+      <p>完成報名表後，將會有自動信寄送到您的信箱，登記繳費帳號後五碼也必須與報名時的信箱相同，所以請照實填寫！</p>
+      <p>若 24 小時未收到自動信，請聯絡我們的<a href="https://fb.com/yzu2016camp">粉絲專頁</a>，將會有熱心的學長姐為您查詢確認唷！<p>
+    </div>
+    <div class="msgDiv msgDiv-info secItems-2" style="margin-left: 0%;">
+      <h5>匯款資訊</h5>
+      <p><b>報名費用：</b></p>
+      <p><b>繳費帳戶：</b></p>
+      <p><b>遠東商銀中壢分行 代碼：</b>8050171</p>
+      <p><b>帳戶戶名：</b></p>
+      <p><b>繳費截止日：</b>8/20</p>
+      <p></p>
+    </div>
+    <div class="msgDiv msgDiv-info secItems-2">
+      <h5>活動資訊</h5>
+      <p><b>活動日期：</b></p>
+      <p><b>活動地點：</b></p>
+      <p><b>活動時間：</b></p>
+      <p><b>報名截止日期：</b></p>
+      <p><b>集合入宿時間：</b></p>
+    </div>
   </content>
-  <hr>
 </div>
 
 <div class="sec2 content">
+  <h3>報名單</h3><hr>
   <form id="K-form">
 <!-- Form Section1 -->
-    <div class="formContainer">
-      <h4 class="formTitle">基本資料</h4>
+    <div class="secContainer">
+      <h5 class="formTitle">基本資料</h5>
 
-      <div class="input-field formItems-3" id="nameDIV">
+      <div class="input-field secItems-3" id="nameDIV">
         <i class="material-icons prefix">person</i>
         <input type="text" name="name" id="nameField"></input>
         <label for="nameField">姓名</label>
       </div>
 
-      <div class="input-field formItems-3" id="nickNameDIV">
+      <div class="input-field secItems-3" id="nickNameDIV">
+        <i class="material-icons prefix mobile">person</i>
         <input type="text" name="nickName" id="nickNameField"></input>
         <label for="nickNameField">綽號</label>
       </div>
 
-      <div class="formItems-3" id="genderDIV">
+      <div class="radioBtn-field secItems-3" id="genderDIV">
         <i class="material-icons prefix">wc</i>
         <label class="radLbl">性別</label>
         <input class="with-gap" name="gender" type="radio" value="男" id="genderMaleRadio" />
@@ -80,13 +107,13 @@
         <label for="genderFemaleRadio">女</label>
       </div>
 
-      <div class="input-field formItems-2" id="cellphoneDIV">
+      <div class="input-field secItems-2" id="cellphoneDIV">
         <i class="material-icons prefix">smartphone</i>
         <input type="tel" name="cellphone" id="cellphoneField"></input>
         <label for="cellphoneField">聯絡電話（本人手機）</label>
       </div>
 
-      <div class="input-field formItems-2" id="emailDIV">
+      <div class="input-field secItems-2" id="emailDIV">
         <i class="material-icons prefix">email</i>
         <input type="email" name="email" id="emailField" class="validate"></input>
         <label for="emailField" data-error="格式錯誤，請重新輸入" data-success="正確！">電子信箱</label>
@@ -94,8 +121,8 @@
 
     </div><br />
 <!-- Form Section2 -->
-    <div class="formContainer">
-      <h4 class="formTitle">保險所需額外資料</h4>
+    <div class="secContainer">
+      <h5 class="formTitle">保險所需額外資料</h5>
 
       <!-- disabled, not necessary filed -->
       <div class="input-field" id="birthdayDIV" hidden>
@@ -104,13 +131,13 @@
         <label for="birthdayField">出生年月日</label>
       </div>
 
-      <div class="input-field formItems-2" id="userIDDIV">
+      <div class="input-field secItems-2" id="userIDDIV">
         <i class="material-icons prefix">assignment_ind</i>
         <input type="text" name="userID" id="userIDField"></input>
         <label for="userIDField">身分證字號</label>
       </div>
 
-      <div class="input-field formItems-2" id="addressDIV">
+      <div class="input-field secItems-2" id="addressDIV">
         <i class="material-icons prefix">location_city</i><!-- business -->
         <input type="text" name="address" id="addressField"></input>
         <label for="addressField">戶籍地址</label>
@@ -123,42 +150,42 @@
         <label for="phoneField">家用電話</label>
       </div>
 
-      <div class="input-field formItems-3" id="parentNameDIV">
+      <div class="input-field secItems-3" id="parentNameDIV">
         <i class="material-icons prefix">account_box</i>
         <input type="text" name="parentName" id="parentNameField"></input>
         <label for="parentNameField">緊急聯絡人姓名</label>
       </div>
 
-      <div class="input-field formItems-3" id="kinshipDIV">
+      <div class="input-field secItems-3" id="kinshipDIV">
         <i class="material-icons prefix">supervisor_account</i>
         <input type="text" name="kinship" id="kinshipField"></input>
         <label for="kinshipField">與緊急聯絡人的親屬關係</label>
       </div>
 
-      <div class="input-field formItems-3" id="parentCellphoneDIV">
+      <div class="input-field secItems-3" id="parentCellphoneDIV">
         <i class="material-icons prefix">contact_phone</i>
         <input type="tel" name="parentCellphone" id="parentCellphoneField"></input>
         <label for="parentCellphoneField">緊急聯絡人聯絡電話</label>
       </div>
 
-      <div class="input-field formItems-1" id="diseaseDIV">
+      <div class="input-field secItems-1" id="diseaseDIV">
         <i class="material-icons prefix">nature_people</i>
-        <input type="text" name="disease" id="diseaseField" placeholder="若無，請填寫無疾病"></input>
+        <input type="text" name="disease" id="diseaseField" placeholder="若無，請填寫「無」"></input>
         <label for="diseaseField">先天性疾病</label>
       </div>
 
     </div><br />
 <!-- Form Section3 -->
-    <div class="formContainer">
-      <h4 class="formTitle">學校資料</h4>
+    <div class="secContainer">
+      <h5 class="formTitle">學校資料</h5>
 
-      <div class="input-field formItems-2" id="yzuIDDIV">
+      <div class="input-field secItems-2" id="yzuIDDIV">
         <i class="material-icons prefix">chrome_reader_mode</i>
         <input type="number" name="yzuID" id="yzuIDField" min="1051301" max="1053389" class="validate"></input>
         <label for="yzuIDField" data-error="錯誤，請輸入正確的學號" data-success="正確！">元智大學學號</label>
       </div>
 
-      <div class="input-field formItems-2" id="transportationDIV">
+      <div class="input-field secItems-2" id="transportationDIV">
         <i class="material-icons prefix">school</i>
         <select name="dept">
           <option value="" disabled selected>請選擇您的學系</option>
@@ -171,10 +198,10 @@
 
     </div><br />
 <!-- Form Section4 -->
-    <div class="formContainer">
-      <h4 class="formTitle">營期所需資料</h4>
+    <div class="secContainer">
+      <h5 class="formTitle">營期所需資料</h5>
 
-      <div class="formItems-2"id="eatingPerfDIV">
+      <div class="radioBtn-field secItems-2"id="eatingPerfDIV">
         <i class="material-icons prefix">restaurant</i>
         <label class="radLbl">飲食習慣</label>
         <input class="with-gap" name="eatingPerf" type="radio" value="non-Vegetarian" id="eatingPerfnonVegeRadio" />
@@ -183,7 +210,7 @@
         <label for="eatingPerfVegeRadio">素</label>
       </div>
 
-      <div class="input-field formItems-2" id="clothingSizeDIV">
+      <div class="input-field secItems-2" id="clothingSizeDIV">
         <i class="material-icons prefix">accessibility</i>
         <select name="clothingSize">
           <option value="" disabled selected>請選擇您的衣服尺寸</option>
@@ -197,7 +224,7 @@
         <label>衣服尺寸</label>
       </div>
 
-      <div class="formItems-2" id="transportationDIV">
+      <div class="radioBtn-field secItems-2" id="transportationDIV">
         <i class="material-icons prefix">directions_transit</i>
         <label class="radLbl">交通方式</label>
         <input class="with-gap" name="transportation" type="radio" value="直達元智" id="transportationToYZURadio" />
@@ -206,7 +233,7 @@
         <label for="transportationByTrainRadio">搭乘火車到內壢車站</label>
       </div>
 
-      <div class="input-field formItems-2" id="beddingDIV">
+      <div class="input-field secItems-2" id="beddingDIV">
         <i class="material-icons prefix">hotel</i>
         <select name="bedding">
           <option value="" disabled selected>請選擇迎期寢具準備方式</option>
@@ -216,7 +243,7 @@
         <label>寢具</label>
       </div>
 
-      <div class="input-field formItems-1" id="moreInfoDIV">
+      <div class="input-field secItems-1" id="moreInfoDIV">
         <i class="material-icons prefix">mode_edit</i>
         <textarea name="moreInfo" id="moreInfo" class="materialize-textarea" length="200"  placeholder="備註欄（如果以實體匯款單或轉帳單方式繳費，請在備註欄留下學員的姓名和學號）"></textarea>
       </div>
@@ -224,7 +251,9 @@
     </div>
 
   </form>
-      <button href="#" id="K-submit" onclick="send()">送出&nbsp;&nbsp;<i class="material-icons submitIt">send</i></button>
+  <div class="submit">
+      <a href="#" id="K-submit" onclick="send()" class="waves-effect btn-flat" style="margin-right: 0px; background-color: rgba(0, 0, 0, 0.05)">送出&nbsp;&nbsp;<i class="material-icons submitIt">send</i></a>
+  </div>
 </div>
 <div includeHTML="../static/assets/html/footer.html"></div>
   <!-- Scripts -->

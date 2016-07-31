@@ -3,11 +3,18 @@ html {
   font-weight: 100;
   color: rgba(0, 28, 49, 1);
 }
-h1 {
+h2 {
   font-weight: 200;
 }
-h2, h3, h4, h5 {
+h3 {
+  font-weight: 300;
+  margin: 0.4rem 0 2.3rem 0;
+}
+h4, h5 {
   font-weight: 100;
+}
+hr {
+  transform: translateY(-18px);
 }
 footer {
   font-weight: normal;
@@ -16,17 +23,50 @@ footer {
   padding: 3% 8% 0 8%;
 }
 
+.msgDiv-danger {
+    border-left-color: #d9534f!important;
+}
+.msgDiv-warning {
+    border-left-color: #f0ad4e!important;
+}
+.msgDiv-info {
+    border-left-color: #5bc0de!important;
+}
+.msgDiv-danger h5 {
+    color: #d9534f;
+}
+.msgDiv-warning h5 {
+    color: #f0ad4e;
+}
+.msgDiv-info h5 {
+    color: #5bc0de;
+}
+.msgDiv {
+    padding: 10px;
+    margin: 20px 0;
+    border: 1px solid #eee;
+    border-left-width: 5px;
+    border-radius: 3px;
+}
+.msgDiv h5 {
+  font-weight: 200;
+}
+.msgDiv b {
+  font-weight: 500;
+  padding-left: 2%;
+}
+
 /* Banner */
 .bannerContainer {
   position: inherit;
   top: 0;
   left: 0;
   height: 40vh;
-  width: 100vw;
+  width: 100%;
   display: flex;
   -webkit-align-items: center;
           align-items: center;
-  background-image: linear-gradient(to bottom, rgba(0, 28, 49, 0.95), rgba(0, 20, 35, 1));
+  background-image: linear-gradient(to bottom, rgba(0, 28, 49, 0.9), rgba(0, 20, 35, 1));
 }
 .banner {
   padding: 8% 0 8% 8%;
@@ -36,8 +76,8 @@ footer {
     height: 50vh;
   }
 }
-/* Form */
-.formContainer {
+/* Sections */
+.secContainer {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -53,6 +93,7 @@ footer {
   -webkit-align-content: flex-start;
      -ms-flex-line-pack: start;
           align-content: flex-start;
+  margin-left: 0.5%;
 }
 .formTitle {
   -webkit-box-flex: 1;
@@ -60,56 +101,61 @@ footer {
           -ms-flex: 1 0 100%;
               flex: 1 0 100%;
 }
-.formItems-3 {
+.secItems-3 {
   -webkit-box-flex: 1;
       -webkit-flex: 1 0 30%;
           -ms-flex: 1 0 30%;
               flex: 1 0 30%;
-  margin-left: 3%;
+  margin-left: 1%;
 }
-.formItems-2 {
+.secItems-2 {
   -webkit-box-flex: 1;
       -webkit-flex: 1 0 40%;
           -ms-flex: 1 0 40%;
               flex: 1 0 40%;
-  margin-left: 3%;
+  margin-left: 1%;
 }
-.formItems-1 {
+.secItems-1 {
   -webkit-box-flex: 1;
       -webkit-flex: 1 0 100%;
           -ms-flex: 1 0 100%;
               flex: 1 0 100%;
-  margin-left: 3%;
+  margin-left: 1%;
 }
-@media screen and (max-width: 850px) {
-  .formContainer {
+@media screen and (max-width: 930px) {
+  .secContainer {
   -webkit-align-items: stretch;
        -ms-flex-align: stretch;
           align-items: stretch;
+    margin-left: 0px;
   }
-  .formItems-3 {
+  .secItems-3 {
     -webkit-box-flex: 1;
         -webkit-flex: 1 0 100%;
             -ms-flex: 1 0 100%;
                 flex: 1 0 100%;
     margin-left: 0%;
   }
-  .formItems-2 {
+  .secItems-2 {
     -webkit-box-flex: 1;
         -webkit-flex: 1 0 100%;
             -ms-flex: 1 0 100%;
                 flex: 1 0 100%;
     margin-left: 0%;
   }
-  .formItems-1 {
+  .secItems-1 {
     margin-left: 0%;
   }
 }
-
 /* Fix - label padding-left */
 .input-field label {
   left: 0rem;
 }
+.radioBtn-field {
+  position: relative;
+  margin-top: 1rem;
+}
+
 /* radioBtn Label fix */
 .radLbl {
   position: relative;
@@ -130,6 +176,11 @@ footer {
     margin-bottom: 1.5rem;
 }
 
+/* Fix overflow */
+input[type=email].validate+label, input[type=number].validate+label,
+input[type=tel].validate+label, input[type=text].validate+label {
+  width: auto!important;
+}
 /* focus color -  icon, input, label */
 .input-field .prefix.active, .input-field input:focus, .input-field label.active {
   color: rgba(0,20,35,1)!important;
@@ -159,4 +210,20 @@ textarea.materialize-textarea:focus:not([readonly]) {
 /* dropdownOptions color */
 .dropdown-content li>a, .dropdown-content li>span {
   color: rgba(0,20,35,1);
+}
+.submit {
+  text-align: right;
+  padding: 5px 0 15px 9px;
+}
+.submit>a {
+  color: rgba(0,28,49,1);
+  margin-right: 18px;
+  transition: color .3s ease;
+  text-transform: uppercase;
+}
+.submit a:hover {
+  color: rgba(0,28,49,0.6);
+}
+.submitIt {
+  vertical-align: middle;
 }
