@@ -14,7 +14,7 @@ h4, h5 {
   font-weight: 100;
 }
 hr {
-  transform: translateY(-18px);
+  transform: translateY(-13px);
 }
 footer {
   font-weight: normal;
@@ -180,6 +180,19 @@ footer {
 input[type=email].validate+label, input[type=number].validate+label,
 input[type=tel].validate+label, input[type=text].validate+label {
   width: auto!important;
+}
+input.invalid  {
+  border-bottom: 1px solid #F44336;
+  box-shadow: 0 1px 0 0 #F44336;
+}
+.DIVinvalid {
+  border: 1px solid #F44336;
+  border-radius: 3px;
+  transition: .3s ease;
+}
+.DIVinvalid:hover {
+  border: 1px solid #fff;
+  border-radius: 3px;
 }
 /* focus color -  icon, input, label */
 .input-field .prefix.active, .input-field input:focus, .input-field label.active {

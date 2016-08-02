@@ -15,6 +15,9 @@ nav {
   -webkit-transition: all 0.4s ease;
   transition: all 0.4s ease;
 }
+snav .item {
+  line-height: 3!important;
+}
 /* Navbar - act1 when on the top, act2 for the rest of condictions */
 nav.act1 {
   padding-top: 30px;
@@ -56,28 +59,57 @@ nav.act2 a.item:hover, nav.act2 a.item.active {
   transition: all 0.4s ease;
   color: rgba(240, 240, 240, 1)!important;
 }
+/* sNavBar */
+
 /* Section1 */
 .section1 {
   height: 90vh;
-  background-color: #eceff1;
+  padding: 150px 13% 5% 13%;
+  background-color: #bdbdbd;
 }
 .section1-content {
-  display: -webkit-flex;
-  display: flex;
-  -webkit-align-items: center;
-          align-items: center;
-  -webkit-justify-content: center;
-          justify-content: center;
   height: 90vh;
-  width: 100vw;
+  width: 100%;
 }
-
+.img-text{
+  width: 370px;
+}
+iframe {
+  margin-right: 25%;
+  margin-left: 25%;
+}
+@media screen and (max-width: 1000px) {
+  .section1 {
+    height: 800px;
+    padding: 150px 0% 5% 0%;
+  }
+  .section1-content {
+    display: flex;
+    height: 800px;
+    flex-direction: column;
+    -webkit-align-content: center;
+            align-content: center;
+    -webkit-align-items: center;
+            align-items: center;
+  }
+  #countdownDIV {
+    display: none;
+  }
+  iframe {
+    margin-right: 0%;
+    margin-left: 0%;
+  }
+}
+.ui.statistics>.statistic {
+  margin: 0 0.9em 2em;
+}
 .dropdownContainer {
   /* push down div */
   display: -webkit-flex;
   display: flex;
-  bottom: 0%;
-  transform: translateY(-50%);
+  top: 0;
+  height: 0;
+  transform: translateY(50%);
   -webkit-align-items: center;
           align-items: center;
   -webkit-justify-content: center;
@@ -135,6 +167,13 @@ section>content>h1 {
 @media only screen and (max-width: 640px) {
   .cardContent {
     width: 90vw;
+  }
+  .img-text{
+    width: 300px;
+  }
+  iframe {
+    width: 336px;
+    height: 189px;
   }
 }
 @media only screen and (max-width: 550px) {

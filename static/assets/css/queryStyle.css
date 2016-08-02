@@ -21,7 +21,7 @@ html {
 /* card */
 .loginCard {
   position: relative;
-  width:38vw;
+  width: 38vw;
   background-color: rgba(0,28,49,0.93);
   box-shadow: 10px 15px 44px -4px rgba(0,0,0,0.7);
 }
