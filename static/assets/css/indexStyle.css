@@ -59,24 +59,38 @@ nav.act2 a.item:hover, nav.act2 a.item.active {
   transition: all 0.4s ease;
   color: rgba(240, 240, 240, 1)!important;
 }
-/* sNavBar */
-
 /* Section1 */
 .section1 {
   height: 90vh;
   padding: 150px 13% 5% 13%;
   background-color: #bdbdbd;
+  background-image: url(../img/bg.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 .section1-content {
   height: 90vh;
   width: 100%;
 }
-.img-text{
+.img-text {
   width: 370px;
 }
+.img-logo {
+  width: 450px;
+  filter: alpha(opacity=20);
+  opacity: 0.2;
+  position: absolute;
+  top: 10%;
+  right: 70px;
+  z-index: 0;
+}
 iframe {
+  /* position fixes the iframe will be covered by castel on desktop */
+  position: relative;
   margin-right: 25%;
   margin-left: 25%;
+  z-index: 1;
 }
 @media screen and (max-width: 1000px) {
   .section1 {
@@ -99,10 +113,15 @@ iframe {
     margin-right: 0%;
     margin-left: 0%;
   }
+  .img-logo {
+    top: 19%;
+  }
 }
+
 .ui.statistics>.statistic {
   margin: 0 0.9em 2em;
 }
+
 .dropdownContainer {
   /* push down div */
   display: -webkit-flex;
@@ -124,9 +143,9 @@ iframe {
     box-shadow: 5px 5px 44px -4px rgba(0,0,0,0.7);
 }
 
-.cardSection {
-  height: 100vh;
-  background-color: rgba(0, 28, 49, 0.9);
+.cardSection1 {
+  height: auto;
+  background-image: linear-gradient(to bottom, rgba(0,64,112,1), rgba(0,30,49,1));
   display: -webkit-flex;
   display: flex;
   flex-direction: column;
@@ -135,9 +154,11 @@ iframe {
   -webkit-justify-content: center;
           justify-content: center;
 }
-.cardContent {
-  height: 90vh;
+.cardContent1 {
+  height: auto;
   width: 75vw;
+  margin-top: 40px;
+  margin-bottom: 40px;
   background-color: #eceff1;
   border-radius: 7px;
   -webkit-transition: all 0.4s ease;
@@ -151,12 +172,12 @@ section>content>h1 {
   color: rgba(0, 28, 49, 0.75);
 }
 @media only screen and (max-width: 1060px) {
-  .cardContent {
+  .cardContent1 {
     width: 83vw;
   }
 }
 @media only screen and (max-width: 950px) {
-  .cardContent {
+  .cardContent1 {
     width: 87vw;
     padding: 1.8rem;
   }
@@ -165,7 +186,7 @@ section>content>h1 {
 
 }
 @media only screen and (max-width: 640px) {
-  .cardContent {
+  .cardContent1 {
     width: 90vw;
   }
   .img-text{
@@ -175,9 +196,26 @@ section>content>h1 {
     width: 336px;
     height: 189px;
   }
+  .section1 {
+    height: 700px;
+  }
+  .img-logo {
+    width: 400px;
+    top: 15%;
+  }
 }
 @media only screen and (max-width: 550px) {
-  .cardContent {
+  .cardContent1 {
     width: 93vw;
+  }
+  .img-logo {
+    width: 380px;
+    right: 10px;
+  }
+}
+@media only screen and (max-width: 400px) {/* iPhone 5 */
+  .img-logo {
+    width: 310px;
+    right: 5px;
   }
 }

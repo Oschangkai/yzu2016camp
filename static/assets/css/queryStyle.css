@@ -134,7 +134,16 @@ form>div>span {
   border-bottom: 1px solid #ffab40;
   box-shadow: 0 1px 0 0 #ffab40;
 }
-
+/* radioBtn - inner color */
+[type="radio"]:checked+label:after,
+[type="radio"].with-gap:checked+label:after {
+  border: 2px solid #ffab40;
+  background-color: #ffab40;
+}
+/* radioBtn - outer color */
+[type="radio"].with-gap:checked+label:before {
+  border: 2px solid #ffab40;
+}
 
 .whiteText {
   color: #fff;
