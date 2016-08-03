@@ -133,7 +133,7 @@ iframe {
   -webkit-justify-content: center;
           justify-content: center;
 }
-.cardContent1 {
+.cardContent {
   height: auto;
   width: 75vw;
   margin-top: 40px;
@@ -144,10 +144,10 @@ iframe {
   transition: all 0.4s ease;
   padding: 3rem;
 }
-.cardContent1:hover {
+.cardContent:hover {
   box-shadow: 10px 15px 44px -4px rgba(0,0,0,0.7);
 }
-.cardContent1 p {
+.cardContent p {
   font-size: 20px;
   line-height: 38px;
 }
@@ -167,6 +167,19 @@ section>content>h1 {
 content>h2>p {
   padding-left: 15px;
 }
+.buttonSec {
+  margin-top: 60px;
+  margin-bottom: 60px;
+  display: -webkit-flex;
+  display: flex;
+  /* Flexbox - vertical center */
+  align-items: center;
+  /* Flexbox - space between all elements */
+  justify-content: space-between;
+}
+.buttonSec button {
+  margin: 15px!important;
+}
 @media only screen and (max-width: 1375px) {
   .img-slipper {
     margin-left: 40%;
@@ -185,7 +198,7 @@ content>h2>p {
   }
 }
 @media only screen and (max-width: 1060px) {
-  .cardContent1 {
+  .cardContent {
     width: 83vw;
   }
   .img-slipper {
@@ -215,7 +228,7 @@ content>h2>p {
     margin-left: 0%;
   }
   .img-logo {
-    top: 19%;
+    top: 23%;
   }
 }
 @media only screen and (max-width: 987px) {
@@ -224,7 +237,7 @@ content>h2>p {
   }
 }
 @media only screen and (max-width: 950px) {
-  .cardContent1 {
+  .cardContent {
     width: 87vw;
     padding: 1.8rem;
   }
@@ -240,7 +253,7 @@ content>h2>p {
   }
 }
 @media only screen and (max-width: 640px) {
-  .cardContent1 {
+  .cardContent {
     width: 90vw;
   }
   .img-text{
@@ -255,9 +268,9 @@ content>h2>p {
   }
   .img-logo {
     width: 400px;
-    top: 15%;
+    top: 28%;
   }
-  .cardContent1 p {
+  .cardContent p {
     font-size: 18px;
     line-height: 28px;
   }
@@ -274,26 +287,21 @@ content>h2>p {
   }
 }
 @media only screen and (max-width: 550px) {
-  .cardContent1 {
+  .cardContent {
     width: 93vw;
   }
-  .img-logo {
-    width: 380px;
-    right: 10px;
-  }
-  .cardContent1 {
+  .cardContent {
     font-size: 16px;
   }
   .img-slipper {
     margin-left: 2%;
   }
-}
-@media only screen and (max-width: 400px) {/* iPhone 5 */
-  .img-logo {
-    width: 310px;
-    right: 5px;
+  .buttonSec {
+    flex-direction: column;
   }
+}
+@media only screen and (max-width: 440px) {/* iPhone 5 */
   .img-slipper {
-    margin-left: -20%;
+    margin-left: -40%;
   }
 }

@@ -25,31 +25,6 @@ html {
   background-color: rgba(0,28,49,0.93);
   box-shadow: 10px 15px 44px -4px rgba(0,0,0,0.7);
 }
-@media only screen and (max-width: 1060px) {
-  .loginCard {
-    width: 60vw;
-  }
-  .bg {
-  background-position: right 30px bottom 25px;
-  }
-}
-@media only screen and (max-width: 970px) {
-  .loginCard {
-    width: 55vw;
-  }
-  .bg {
-    background-size: 30%;
-  }
-}
-@media only screen and (max-width: 640px) {
-  .loginCard {
-    width: 91vw;
-  }
-  .bg {
-    background-size: 40%;
-    background-position: right 5px bottom 5px;
-  }
-}
 /* card-fix */
 .card {
   border-radius: 9px;
@@ -114,11 +89,6 @@ form>div>span {
   padding-bottom: 1em;
   align-items: center;
 }
-@media screen and (max-width: 648px) {
-  .choose {
-    flex-direction: column;
-  }
-}
 .input-field label {
   left: 0rem;
 }
@@ -147,4 +117,42 @@ form>div>span {
 
 .whiteText {
   color: #fff;
+}
+@media only screen and (max-width: 1060px) {
+  .loginCard {
+    width: 60vw;
+  }
+  .bg {
+  background-position: right 30px bottom 25px;
+  }
+}
+@media only screen and (max-width: 970px) {
+  .loginCard {
+    width: 55vw;
+  }
+  .bg {
+    background-size: 30%;
+  }
+}
+@media screen and (max-width: 648px) {
+  .choose {
+    flex-direction: column;
+  }
+}
+@media only screen and (max-width: 640px) {
+  .loginCard {
+    width: 91vw;
+  }
+  .bg {
+    background-size: 40%;
+    background-position: right 5px bottom 5px;
+  }
+  .cardContainer {
+    height: 800px;
+  }
+}
+@media only screen and (max-height: 710px) {
+  .cardContainer {
+    height: 800px;
+  }
 }
