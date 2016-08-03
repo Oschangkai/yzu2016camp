@@ -92,6 +92,107 @@ iframe {
   margin-left: 25%;
   z-index: 1;
 }
+
+
+.ui.statistics>.statistic {
+  margin: 0 0.9em 2em;
+}
+
+.dropdownContainer {
+  /* push down div */
+  display: -webkit-flex;
+  display: flex;
+  top: 0;
+  height: 0;
+  transform: translateY(50%);
+  -webkit-align-items: center;
+          align-items: center;
+  -webkit-justify-content: center;
+          justify-content: center;
+}
+.dropdownBtn {
+  width: 50px;
+  height: 50px;
+  border: none;
+  border-radius: 100%;
+  background-color: white;
+  box-shadow: 5px 5px 44px -4px rgba(0,0,0,0.7);
+}
+
+.cardSection1 {
+  height: auto;
+  background: -webkit-radial-gradient(rgba(0,64,112,1), rgba(0,30,49,1));
+  background:    -moz-radial-gradient(rgba(0,64,112,1), rgba(0,30,49,1));
+  background:      -o-radial-gradient(rgba(0,64,112,1), rgba(0,30,49,1));
+  background:   radial-gradient(rgba(0,64,112,1), rgba(0,30,49,1));
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  -webkit-align-items: center;
+          align-items: center;
+  -webkit-justify-content: center;
+          justify-content: center;
+}
+.cardContent1 {
+  height: auto;
+  width: 75vw;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  background-color: rgba(236, 239, 241, 0.85);
+  border-radius: 7px;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+  padding: 3rem;
+}
+.cardContent1:hover {
+  box-shadow: 10px 15px 44px -4px rgba(0,0,0,0.7);
+}
+.cardContent1 p {
+  font-size: 20px;
+  line-height: 38px;
+}
+section>content>h1 {
+  color: rgba(0, 28, 49, 0.75);
+}
+.img-slipper {
+  width: 800px;
+  margin-bottom: -800px;
+  filter: alpha(opacity=10);
+  opacity: 0.1;
+  position: inherit;
+  z-index: 0;
+  transform: translateY(-90%);
+  margin-left: 45%;
+}
+content>h2>p {
+  padding-left: 15px;
+}
+@media only screen and (max-width: 1375px) {
+  .img-slipper {
+    margin-left: 40%;
+  }
+}
+@media only screen and (max-width: 1278px) {
+  .img-slipper {
+    margin-left: 35%;
+  }
+}
+@media only screen and (max-width: 1188px) {
+  .img-slipper {
+    width: 750px;
+    margin-bottom: -750px;
+    margin-left: 30%;
+  }
+}
+@media only screen and (max-width: 1060px) {
+  .cardContent1 {
+    width: 83vw;
+  }
+  .img-slipper {
+    width: 720px;
+    margin-bottom: -720px;
+  }
+}
 @media screen and (max-width: 1000px) {
   .section1 {
     height: 800px;
@@ -117,63 +218,9 @@ iframe {
     top: 19%;
   }
 }
-
-.ui.statistics>.statistic {
-  margin: 0 0.9em 2em;
-}
-
-.dropdownContainer {
-  /* push down div */
-  display: -webkit-flex;
-  display: flex;
-  top: 0;
-  height: 0;
-  transform: translateY(50%);
-  -webkit-align-items: center;
-          align-items: center;
-  -webkit-justify-content: center;
-          justify-content: center;
-}
-.dropdownBtn {
-    width: 50px;
-    height: 50px;
-    border: none;
-    border-radius: 100%;
-    background-color: white;
-    box-shadow: 5px 5px 44px -4px rgba(0,0,0,0.7);
-}
-
-.cardSection1 {
-  height: auto;
-  background-image: linear-gradient(to bottom, rgba(0,64,112,1), rgba(0,30,49,1));
-  display: -webkit-flex;
-  display: flex;
-  flex-direction: column;
-  -webkit-align-items: center;
-          align-items: center;
-  -webkit-justify-content: center;
-          justify-content: center;
-}
-.cardContent1 {
-  height: auto;
-  width: 75vw;
-  margin-top: 40px;
-  margin-bottom: 40px;
-  background-color: #eceff1;
-  border-radius: 7px;
-  -webkit-transition: all 0.4s ease;
-  transition: all 0.4s ease;
-  padding: 3rem;
-}
-.cardContent:hover{
-  box-shadow: 10px 15px 44px -4px rgba(0,0,0,0.7);
-}
-section>content>h1 {
-  color: rgba(0, 28, 49, 0.75);
-}
-@media only screen and (max-width: 1060px) {
-  .cardContent1 {
-    width: 83vw;
+@media only screen and (max-width: 987px) {
+  .img-slipper {
+    margin-left: 25%;
   }
 }
 @media only screen and (max-width: 950px) {
@@ -181,9 +228,16 @@ section>content>h1 {
     width: 87vw;
     padding: 1.8rem;
   }
+  .img-slipper {
+    margin-left: 20%;
+  }
 }
-@media screen and (max-width: 760px) {
-
+@media screen and (max-width: 768px) {
+  .img-slipper {
+    width: 680px;
+    margin-bottom: -680px;
+    margin-left: 15%;
+  }
 }
 @media only screen and (max-width: 640px) {
   .cardContent1 {
@@ -203,6 +257,21 @@ section>content>h1 {
     width: 400px;
     top: 15%;
   }
+  .cardContent1 p {
+    font-size: 18px;
+    line-height: 28px;
+  }
+  .img-slipper {
+    width: 660px;
+    margin-bottom: -660px;
+    margin-left: 15%;
+    transform: translateY(-79%);
+  }
+}
+@media only screen and (max-width: 580px) {
+  .img-slipper {
+    margin-left: 6%;
+  }
 }
 @media only screen and (max-width: 550px) {
   .cardContent1 {
@@ -212,10 +281,19 @@ section>content>h1 {
     width: 380px;
     right: 10px;
   }
+  .cardContent1 {
+    font-size: 16px;
+  }
+  .img-slipper {
+    margin-left: 2%;
+  }
 }
 @media only screen and (max-width: 400px) {/* iPhone 5 */
   .img-logo {
     width: 310px;
     right: 5px;
+  }
+  .img-slipper {
+    margin-left: -20%;
   }
 }
