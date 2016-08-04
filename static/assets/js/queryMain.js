@@ -16,7 +16,7 @@ function send(){
       tmp[t.name]=t.value;
 
       if(t.className=="validate invalid"){
-        sweetAlert("你知道多寫防呆機制很累嗎?", "回去檢查你的資料有沒有錯!!!", "error");
+        sweetAlert("你知道嗎~", "就跟你說有錯了還要送!!!", "error");
         return;
       }
 
@@ -28,13 +28,13 @@ function send(){
 
   if(method) {
 
-    alert(jsonForm);
+    //alert(jsonForm);
     if(method == "query") {
       var sendtype = "GET";
       if(tmp["email"]=="") {
         $("#emailField").attr("class","validate invalid");
         $("#emailDIV").children("label").attr("class","active");
-        sweetAlert("你知道多寫防呆機制很累嗎?", "電子信箱記得寫......", "error");
+        sweetAlert("你知道多寫防呆機制多辛苦嗎?", "回去檢查你的資料有沒有錯!!!", "error");
         return;
       }
     } else if(method == "register") {
@@ -42,13 +42,13 @@ function send(){
       if(tmp["email"]=="") {
         $("#emailField").attr("class","validate invalid");
         $("#emailDIV").children("label").attr("class","active");
-        sweetAlert("你知道多寫防呆機制很累嗎?", "電子信箱記得寫......", "error");
+        sweetAlert("你知道多寫防呆機制多辛苦嗎?", "回去檢查你的資料有沒有錯!!!", "error");
         return;
       }
       if(tmp["payment"]=="") {
         $("#paymentField").attr("class","validate invalid");
         $("#paymentDIV").children("label").attr("class","active");
-        sweetAlert("你知道多寫防呆機制很累嗎?", "都填了電子信箱，帳號後五碼也記得寫一下嘛.....", "error");
+        sweetAlert("你知道多寫防呆機制多辛苦嗎?", "回去檢查你的資料有沒有錯!!!", "error");
         return;
       }
     }
@@ -60,16 +60,64 @@ function send(){
       type: sendtype,
       datatype: "json",
 
-      success: function(msg) {alert(msg);},
+      success: function(msg) {
+        msg=JSON.parse(msg);
+        if(msg["statusCode"]==500){
+            sweetAlert("Unknown Error","","error");
+        }
+        else if(msg["statusCode"]==449){
+
+            if(method == "register"){
+                sweetAlert("資料錯誤","請檢查你的資料或者是你已經報名過了","error");
+            }
+            else{
+
+                sweetAlert("孩子~","請先填寫後五碼好嗎?","error");
+                return;
+            }
+        }
+
+        else if(msg["statusCode"]==200){
+            if(method == "register"){
+                sweetAlert("報名成功","","success");
+            }
+            else{
+                if(msg["isPay"]){
+                sweetAlert("繳費成功","","success");
+                return;
+                }
+                sweetAlert("尚未繳費","","error");
+                return;
+            }
+        }
+        //no register
+        else if(msg["statusCode"]==487){
+            if(method == "register"){
+              sweetAlert({
+                title: "這位施主~",
+                text: "請先<a href='https://web-yzu2016camp.rhcloud.com/portal/register'>註冊</a>好嗎ლ(́◕◞౪◟◕‵ლ)",
+                html: true ,
+                type: "error",});
+                }
+            else{
+                if(msg["isPay"]){
+                sweetAlert("繳費成功","","success");
+                return;
+                }
+                sweetAlert("繳費失敗","","error");
+                return;
+            }
+        }
+      },
       error: function(xhr, ajaxOptions, thrownError) {
         alert(xhr.status);
         alert(thrownError);
-        alert(url);
+
       }
     });
 
   } else {
-    sweetAlert("你知道多寫防呆機制很累嗎?", "要登記還是查詢選一下啊!!!!!", "error");
+    sweetAlert("你知道多寫防呆機制多辛苦嗎?", "你是要登記還是查詢啊啊!!!!!", "error");
   }
 
 }

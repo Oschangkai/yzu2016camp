@@ -33,6 +33,7 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/earlyaccess/notosanstc.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.css">
   <link rel="stylesheet" href="../static/assets/css/registerStyle.css">
   <link rel="stylesheet" href="../static/assets/css/desktop.css">
   <!--[if lt IE 9]>
@@ -53,7 +54,7 @@
     <div class="msgDiv msgDiv-danger secItems-1" style="margin-left: 0%;">
       <h5>填完報名表不代表報名完成！</h5>
       <p>填完以下表單後，請記得至銀行轉帳繳費，並到<a href="../query">這裡</a>填寫繳款帳號後五碼，才算是完成所有報名程序！</p>
-      <p>若是以匯款單繳費的學員，請先繳費後再填單，並在備註欄填寫匯款人姓名。</p>
+      <p>若是以匯款單 或 無摺存款繳費的學員，請先繳費後再填以下報名表，並在備註欄填寫匯款人姓名以及郵局代碼。</p>
     </div>
     <div class="msgDiv msgDiv-warning secItems-1" style="margin-left: 0%;">
       <h5>注意！</h5>
@@ -63,18 +64,18 @@
     <div class="msgDiv msgDiv-info secItems-2" style="margin-left: 0%;">
       <h5>匯款資訊</h5>
       <p><b>繳費截止日：</b>8/20(六)</p>
-      <p><b>報名費用：</b></p>
-      <p><b>繳費帳戶：</b></p>
-      <p><b>遠東商銀中壢分行 代碼：</b>8050171</p>
-      <p><b>帳戶戶名：</b></p>
+      <p><b>報名費用：</b>4000元整</p>
+      <p><b>繳費帳戶：</b>004-001-1000108-6</p>
+      <p><b>遠東商銀桃園分行 代碼：</b>8050045</p>
+      <p><b>帳戶戶名：</b>元智大學資訊工程學系系學會黃翊唐</p>
       <p></p>
     </div>
     <div class="msgDiv msgDiv-info secItems-2">
       <h5>活動資訊</h5>
-      <p><b>報名截止日期：</b>8/18(四)</p>
+      <p><b>報名截止日期：</b>8/18(四)中午12時</p>
       <p><b>活動日期：</b>8/22(一)&nbsp;&nbsp;—&nbsp;&nbsp;8/26(五)</p>
-      <p><b>活動地點：</b></p>
-      <p><b>集合入宿時間：</b></p>
+      <p><b>活動地點：</b>元智大學校園</p>
+      <p><b>集合入宿時間：</b>8/22 早上9:00～下午01:00於男女二宿一樓廣場</p>
       <p>&nbsp;</p>
     </div>
   </content>
@@ -89,7 +90,7 @@
 
       <div class="input-field secItems-3" id="nameDIV">
         <i class="material-icons prefix">person</i>
-        <input type="text" name="name" id="nameField"></input>
+        <input type="text" name="name" id="nameField" class="validate"></input>
         <label for="nameField">姓名</label>
       </div>
 
@@ -110,14 +111,14 @@
 
       <div class="input-field secItems-2" id="cellphoneDIV">
         <i class="material-icons prefix">smartphone</i>
-        <input type="tel" name="cellphone" id="cellphoneField"></input>
+        <input type="tel" name="cellphone" id="cellphoneField" class="validate"></input>
         <label for="cellphoneField">聯絡電話（本人手機）</label>
       </div>
 
       <div class="input-field secItems-2" id="emailDIV">
         <i class="material-icons prefix">email</i>
         <input type="email" name="email" id="emailField" class="validate"></input>
-        <label for="emailField" data-error="格式錯誤，請重新輸入" data-success="正確！">電子信箱</label>
+        <label for="emailField" data-error="格式錯誤" data-success="正確！">電子信箱</label>
       </div>
 
     </div><br />
@@ -134,13 +135,13 @@
 
       <div class="input-field secItems-2" id="userIDDIV">
         <i class="material-icons prefix">assignment_ind</i>
-        <input type="text" name="userID" id="userIDField"></input>
+        <input type="text" name="userID" id="userIDField" class="validate"></input>
         <label for="userIDField">身分證字號</label>
       </div>
 
       <div class="input-field secItems-2" id="addressDIV">
         <i class="material-icons prefix">location_city</i><!-- business -->
-        <input type="text" name="address" id="addressField"></input>
+        <input type="text" name="address" id="addressField" class="validate"></input>
         <label for="addressField">戶籍地址</label>
       </div>
 
@@ -153,25 +154,25 @@
 
       <div class="input-field secItems-3" id="parentNameDIV">
         <i class="material-icons prefix">account_box</i>
-        <input type="text" name="parentName" id="parentNameField"></input>
+        <input type="text" name="parentName" id="parentNameField" class="validate"></input>
         <label for="parentNameField">緊急聯絡人姓名</label>
       </div>
 
       <div class="input-field secItems-3" id="kinshipDIV">
         <i class="material-icons prefix">supervisor_account</i>
-        <input type="text" name="kinship" id="kinshipField"></input>
+        <input type="text" name="kinship" id="kinshipField" class="validate"></input>
         <label for="kinshipField">與緊急聯絡人的親屬關係</label>
       </div>
 
       <div class="input-field secItems-3" id="parentCellphoneDIV">
         <i class="material-icons prefix">contact_phone</i>
-        <input type="tel" name="parentCellphone" id="parentCellphoneField"></input>
+        <input type="tel" name="parentCellphone" id="parentCellphoneField" class="validate"></input>
         <label for="parentCellphoneField">緊急聯絡人聯絡電話</label>
       </div>
 
       <div class="input-field secItems-1" id="diseaseDIV">
         <i class="material-icons prefix">nature_people</i>
-        <input type="text" name="disease" id="diseaseField" placeholder="若無，請填寫「無」"></input>
+        <input type="text" name="disease" id="diseaseField" placeholder="若無，請填寫「無」" class="validate"></input>
         <label for="diseaseField">先天性疾病</label>
       </div>
 
@@ -182,8 +183,8 @@
 
       <div class="input-field secItems-2" id="yzuIDDIV">
         <i class="material-icons prefix">chrome_reader_mode</i>
-        <input type="number" name="yzuID" id="yzuIDField" min="1051301" max="1053389" class="validate"></input>
-        <label for="yzuIDField" data-error="錯誤，請輸入正確的學號" data-success="正確！">元智大學學號</label>
+        <input type="number" name="yzuID" id="yzuIDField" min="1051301" max="1053389" class="validate" class="validate"></input>
+        <label for="yzuIDField" data-error="學號錯了唷" data-success="正確！">元智大學學號</label>
       </div>
 
       <div class="input-field secItems-2" id="transportationDIV">
@@ -222,7 +223,8 @@
           <option name="clothingSize" value="XL">XL</option>
           <option name="clothingSize" value="XXL">XXL</option>
         </select>
-        <label>衣服尺寸<a href="/clothingSize">（尺寸參考表按此）</a></label>
+        <label>衣服尺寸<a href="https://yzu2016camp.itaclub.asia/portal/register/clothingSize" target="_blank">
+          （尺寸參考表按此）</a></label>
       </div>
 
       <div class="radioBtn-field secItems-2" id="transportationDIV">
@@ -261,6 +263,7 @@
   <script src="../static/assets/js/includeHTML.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert-dev.min.js"></script>
   <script src="../static/assets/js/desktop.js"></script>
   <script src="../static/assets/js/registerMain.js"></script>
 </body>

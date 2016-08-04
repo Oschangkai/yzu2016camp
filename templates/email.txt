@@ -1,0 +1,41 @@
+您好，{{user["name"]}}，這是由程式自動生成的信件，我們已經收到您的報名資訊。
+提醒您，若您以ATM轉帳，記得上網填寫帳號後五碼後，報名程序才算真正結束唷！
+
+我們的繳費資訊如下：
+  銀行代碼：004-001-1000108-6
+  遠東商銀桃園分行 代碼：8050045
+  帳號：元智大學資訊工程學系系學會黃翊唐
+  金額：4000元
+後五碼登記頁面：https://yzu2016camp.itaclub.asia/portal/query
+繳費查詢頁面：https://yzu2016camp.itaclub.asia/portal/query
+
+如有任何問題，歡迎直接回覆這封信件。官網上有大部分的活動資訊，粉絲專頁也會定期更新貼文，請多多利用！
+感謝您的參與！
+
+
+您的報名資訊：
+基本資料：
+  姓名：       {{user["name"]}}
+  綽號：       {{user["nickName"]}}
+  性別：       {{user["gender"]}}
+  連絡電話：    {{user["cellphone"]}}
+  電子信箱：    {{user["email"]}}
+
+保險所需額外資料：
+  身分證字號：      {{user["userID"]}}
+  戶籍地址：        {{user["address"]}}
+  緊急聯絡人姓名：   {{user["parentName"]}}
+  親屬關係：        {{user["kinship"]}}
+  緊急連絡人電話：   {{user["parentCellphone"]}}
+  先天性疾病：       {{user["disease"]}}
+
+學校資料：
+  學號：  {{user["yzuID"]}}
+  學系：  {{user["dept"]}}
+
+營期所需資料：
+  飲食習慣：  {{user["eatingPerf"]}}
+  衣服尺寸：  {{user["clothingSize"]}}
+  交通方式：  {{user["transportation"]}}
+  寢具：      {{user["bedding"]}}
+  備註：      {{user["moreInfo"]}}
