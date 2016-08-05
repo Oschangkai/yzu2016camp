@@ -111,7 +111,8 @@ function send(){
             sweetAlert("資料錯誤","請檢查你的資料或者是你已經報名過了","error");
         }
         else if(msg["statusCode"]==200){
-            sweetAlert("報名成功","","success");
+            sweetAlert("報名成功","以ATM繳費同學記得填寫後五碼唷~~","success");
+            window.location.href = "https://yzu2016camp.itaclub.asia";
         }
       },
       error: function(xhr, ajaxOptions, thrownError) {
@@ -181,7 +182,7 @@ $("#cellphoneField").blur(function(){
         $("#cellphoneDIV").children("label").attr("class","active");
         return;
     }
-    if(value.search(/^(09)[0-9]{8}/)==-1){
+    if(value.search(/^(09)[0-9]{8}$/)==-1){
         sweetAlert({
             title: "格式錯誤~",
             text: "電話號碼覺得難過<br>但電話號碼不說",
@@ -200,7 +201,7 @@ $("#cellphoneField").blur(function(){
 $("#parentCellphoneField").blur(function(){
     var value=$("#parentCellphoneField")[0].value;
     //if error
-    if(value.search(/^(09)[0-9]{8}/)==-1){
+    if(value.search(/^(09)[0-9]{8}$/)==-1){
         sweetAlert({
             title: "格式錯誤~",
             text: "電話號碼覺得難過<br>但電話號碼不說",
