@@ -80,7 +80,7 @@ function send(){
         if(!(i=="nickName"||i=="moreInfo")){
         sweetAlert({
             title: "這位施主~",
-            text: "你眼睛業障重嗎? <br>有選單沒填就想矇混關?<br>想太美了ლ(́◕◞౪◟◕‵ლ)",
+            text: "你眼睛業障重嗎? <br>有選單沒填就想矇混過關?<br>想太美了ლ(́◕◞౪◟◕‵ლ)",
             html: true ,
             type: "error",});
          return;
@@ -111,8 +111,14 @@ function send(){
             sweetAlert("資料錯誤","請檢查你的資料或者是你已經報名過了","error");
         }
         else if(msg["statusCode"]==200){
-            sweetAlert("報名成功","以ATM繳費同學記得填寫後五碼唷~~","success");
-            window.location.href = "https://yzu2016camp.itaclub.asia";
+            sweetAlert ({
+              title: "報名成功",
+              text: "以ATM繳費同學記得填寫後五碼唷~~",
+              type: "success"
+            },
+            function(){
+              window.location.href = "https://yzu2016camp.itaclub.asia";
+            });
         }
       },
       error: function(xhr, ajaxOptions, thrownError) {
