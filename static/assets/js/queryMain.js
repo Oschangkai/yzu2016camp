@@ -79,7 +79,7 @@ function send(){
 
         else if(msg["statusCode"]==200){
             if(method == "register"){
-                sweetAlert("報名成功","","success");
+                sweetAlert("登記成功","","success");
             }
             else{
                 if(msg["isPay"]){
@@ -121,3 +121,26 @@ function send(){
   }
 
 }
+
+
+//check payment
+$("#paymentField").blur(function(){
+    var value=$("#paymentField")[0].value;
+    //if error
+    if(!value){
+        $("#paymentField").attr("class","validate invalid");
+        $("#paymentDIV").children("label").attr("class","active");
+        return;
+    }
+    if(value.search(/^[0-9]{5}$/)==-1){
+        sweetAlert({
+            title: "孩子阿~~",
+            text: "不要浪費你父母的錢好嗎= =<br>繳費後五碼請認真填寫",
+            html: true ,
+            type: "error",
+            });
+        $("#paymentField").attr("class","validate invalid");
+        $("#paymentDIV").children("label").attr("class","active");
+        return;
+    }
+});//end of payment

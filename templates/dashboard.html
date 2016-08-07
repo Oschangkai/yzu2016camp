@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2/semantic.min.css'>
+    <link rel='stylesheet' href='https://cdn.datatables.net/1.10.12/css/jquery.dataTables.min.css'>
+    <link rel="stylesheet" href="https://cdn.datatables.net/buttons/1.2.2/css/buttons.dataTables.min.css">
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2/semantic.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.2.2/js/dataTables.buttons.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.2.2/js/buttons.flash.min.js"></script>
+    <script src="https://cdn.rawgit.com/bpampuch/pdfmake/0.1.18/build/pdfmake.min.js"></script>
+    <script src="https://cdn.rawgit.com/bpampuch/pdfmake/0.1.18/build/vfs_fonts.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.2.2/js/buttons.html5.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.2.2/js/buttons.print.min.js"></script>
+
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-80552556-1', 'auto');
+      ga('send', 'pageview');
+
+    </script>
+
+</head>
+<body>
+  <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PSXGW4"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PSXGW4');</script>
+    <div id="showController">
+        <form>
+        <input type="checkbox" class="SandH" data-column="0" checked>姓名
+        <input type="checkbox" class="SandH" data-column="1" checked>綽號
+        <input type="checkbox" class="SandH" data-column="2" checked>性別
+        <input type="checkbox" class="SandH" data-column="3" checked>email
+        <input type="checkbox" class="SandH" data-column="4" checked>聯絡電話
+        <input type="checkbox" class="SandH" data-column="5" checked>身分證字號
+        <input type="checkbox" class="SandH" data-column="6" checked>戶籍地址
+        <input type="checkbox" class="SandH" data-column="7" checked>緊急聯絡人
+        <input type="checkbox" class="SandH" data-column="8" checked>親屬關係
+        <input type="checkbox" class="SandH" data-column="9" checked>緊急聯絡人手機號碼
+        <input type="checkbox" class="SandH" data-column="10"checked>先天性疾病
+        <input type="checkbox" class="SandH" data-column="11"checked>元智大學學號
+        <input type="checkbox" class="SandH" data-column="12"checked>學系
+        <input type="checkbox" class="SandH" data-column="13"checked>飲食習慣
+        <input type="checkbox" class="SandH" data-column="14"checked>衣服尺寸
+        <input type="checkbox" class="SandH" data-column="15"checked>交通方式
+        <input type="checkbox" class="SandH" data-column="16"checked>迎期寢具準備方式
+        <input type="checkbox" class="SandH" data-column="17"checked>繳費後五碼
+        <input type="checkbox" class="SandH" data-column="18"checked>是否繳費
+        <input type="checkbox" class="SandH" data-column="19"checked>備註欄
+        <input type="checkbox" id="edit" >編輯模式
+        </form>
+    </div>
+    <table id="datatable" class="display" cellspacing="0" width="100%">
+  <thead>
+    <tr id="tag">
+        <th id="name">姓名</th>
+        <th id="nickName">綽號</th>
+        <th id="gender">性別</th>
+        <th id="email">email</th>
+        <th id="cellphone">聯絡電話（本人手機）</th>
+        <th id="userID">身分證字號</th>
+        <th id="address">戶籍地址</th>
+        <th id="parentName">緊急聯絡人姓名</th>
+        <th id="kinship">與緊急聯絡人的親屬關係</th>
+        <th id="parentCellphone">緊急聯絡人手機號碼</th>
+        <th id="disease">先天性疾病</th>
+        <th id="yzuID">元智大學學號</th>
+        <th id="dept">學系</th>
+        <th id="eatingPerf">飲食習慣</th>
+        <th id="clothingSize">衣服尺寸</th>
+        <th id="transportation">交通方式</th>
+        <th id="bedding">迎期寢具準備方式</th>
+        <th id="payment">繳費後五碼</th>
+        <th id="isPay">是否繳費</th>
+        <th id="moreInfo">備註欄</th>
+
+    </tr>
+  </thead>
+  <tbody id="table">
+
+  </tbody>
+</table>
+
+    <script src="../static/assets/js/dashboard.js"></script>
+
+</body>
+</html>

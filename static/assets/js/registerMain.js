@@ -14,7 +14,7 @@ function nullValue(obj){
          $("#"+obj+"DIV").children("label").attr("class","active");
          sweetAlert({
             title: "這位施主~",
-            text: "你眼睛業障重嗎? <br>有東西沒填就想矇混關?<br>想太美了ლ(́◕◞౪◟◕‵ლ)",
+            text: "你眼睛業障重嗎? <br>有東西沒填就想矇混過關?<br>想太美了ლ(́◕◞౪◟◕‵ლ)",
             html: true ,
             type: "error",});
 }
@@ -43,7 +43,7 @@ function send(){
          $("#"+t.name+"DIV").children("label").attr("class","active");
          sweetAlert({
             title: "這位施主~",
-            text: "你眼睛業障重嗎? <br>有東西沒填就想矇混關?<br>想太美了ლ(́◕◞౪◟◕‵ლ)",
+            text: "你眼睛業障重嗎? <br>有東西沒填就想矇混過關?<br>想太美了ლ(́◕◞౪◟◕‵ლ)",
             html: true ,
             type: "error",});
          return;
@@ -69,7 +69,7 @@ function send(){
   if((!tmp["transportation"])||(!tmp["eatingPerf"])||(!tmp["gender"])){
             sweetAlert({
             title: "這位施主~",
-            text: "你眼睛業障重嗎? <br>有選項沒填就想矇混關?<br>想太美了ლ(́◕◞౪◟◕‵ლ)",
+            text: "你眼睛業障重嗎? <br>有選項沒填就想矇混過關?<br>想太美了ლ(́◕◞౪◟◕‵ლ)",
             html: true ,
             type: "error",});
          return;
