@@ -1,4 +1,11 @@
-html {
+body, h1, h2, h3, h4, h5 {
+  font-family: 'Noto Sans TC', sans-serif!important;
+}
+.ui.button {
+  font-family: 'Noto Sans TC', sans-serif!important;
+  font-weight: 400;
+}
+.ui.menu {
   font-family: 'Noto Sans TC', sans-serif!important;
 }
 i.icon {
